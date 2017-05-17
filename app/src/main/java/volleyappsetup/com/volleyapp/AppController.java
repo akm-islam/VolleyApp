@@ -33,6 +33,10 @@ public class AppController extends Application {
         return mInstance;
     }
 
+
+
+
+// This is for singletone becoz very expensive
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             //very expensive
@@ -41,7 +45,7 @@ public class AppController extends Application {
 
         return mRequestQueue;
     }
-
+// This is for singletone becoz very expensive
     public ImageLoader getImageLoader() {
         getRequestQueue();
         if (mImageLoader == null) {
@@ -50,6 +54,8 @@ public class AppController extends Application {
         }
         return this.mImageLoader;
     }
+
+// =>IF ADDEDD WITH A TAG WE CAN USE SAME TAG FOR SOME OF THE REQUEST AND DELETE THEM TOGETHER
 
     public <T> void addToRequestQueue(Request<T> req, String tag) {
         // set the default tag if tag is empty
