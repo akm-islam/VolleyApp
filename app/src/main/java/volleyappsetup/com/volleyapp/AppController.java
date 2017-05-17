@@ -26,7 +26,7 @@ public class AppController extends Application {
         super.onCreate();
 
         mInstance = this;
-        //when appcontroller is created minstance is set as an appcontroller null object;
+        //minstance is Appcontroller Object which is created First;
     }
 
     public static synchronized AppController getInstance() {
